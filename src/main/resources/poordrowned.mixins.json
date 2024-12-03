@@ -8,7 +8,8 @@
     "ThrownTridentMixin",
     "DrownedMixin",
     "AbstractArrowMixin",
-    "RangedAttackMobMixin"
+    "RangedAttackMobMixin",
+    "PortalShapeMixin"
   ],
   "client": [
   ],
