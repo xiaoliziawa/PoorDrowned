@@ -1,5 +1,6 @@
 package net.prizowo.poordrowned.mixin;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.entity.monster.Illusioner;
 import net.minecraft.world.entity.monster.Pillager;
@@ -29,14 +30,8 @@ public class RangedAttackMobMixin {
             poordrowned$shotCount++;
             
             if (poordrowned$shotCount >= 10 + poordrowned$random.nextInt(21)) {
-                if (self instanceof AbstractSkeleton skeleton) {
-                    WeaponHelper.handleWeaponBreak(skeleton, false);
-                } else if (self instanceof Pillager pillager) {
-                    WeaponHelper.handleWeaponBreak(pillager, true);
-                } else if (self instanceof Piglin piglin) {
-                    WeaponHelper.handleWeaponBreak(piglin, true);
-                } else if (self instanceof Illusioner illusioner) {
-                    WeaponHelper.handleWeaponBreak(illusioner, false);
+                if (self instanceof LivingEntity entity) {
+                    WeaponHelper.handleWeaponBreak(entity);
                 }
             }
         }
