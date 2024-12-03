@@ -5,11 +5,11 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "poordrowned.refmap.json",
   "mixins": [
-    "AbstractArrowMixin",
+    "ThrownTridentMixin",
     "DrownedMixin",
-    "PortalShapeMixin",
+    "AbstractArrowMixin",
     "RangedAttackMobMixin",
-    "ThrownTridentMixin"
+    "PortalShapeMixin"
   ],
   "client": [
   ],
